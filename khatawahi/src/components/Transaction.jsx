@@ -9,7 +9,7 @@ function Transaction({transactions}) {
 
         if(id){
             try {
-                const res = await axios.delete(`http://localhost:3000/transections/${id}`,{headers:{Authorization:token}}).catch(console.error());
+                const res = await axios.delete(`https://api-katawahi.onrender.com/transections/${id}`,{headers:{Authorization:token}}).catch(console.error());
                 if(res){
                     console.log(res.data.message);
                     location.reload();

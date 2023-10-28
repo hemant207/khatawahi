@@ -21,7 +21,7 @@ function AllTransactions() {
                     order: (sortDate?'ASC':'DESC')
                   }
             }
-            axios.get('http://localhost:3000/transections',config).then((res)=>{
+            axios.get('https://api-katawahi.onrender.com/transections',config).then((res)=>{
                 console.log(res.data.row);
 
                 if(res.data.row){

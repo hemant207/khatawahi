@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/user/login", {
+      const response = await axios.post("https://api-katawahi.onrender.com/user/login", {
         username,
         password,
       });

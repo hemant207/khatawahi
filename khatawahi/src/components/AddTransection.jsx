@@ -26,7 +26,7 @@ function AddTransection() {
     console.log(transaction);
     // You can send a POST request to your server with the form data here
     // Example: fetch('/addtransaction', { method: 'POST', body: JSON.stringify(transaction) })
-    const res = await axios.post('http://localhost:3000/transections/add',transaction,{headers:{Authorization:token}}).catch(console.error());
+    const res = await axios.post('https://api-katawahi.onrender.com/transections/add',transaction,{headers:{Authorization:token}}).catch(console.error());
     console.log(res.data);
     location.reload();
   };

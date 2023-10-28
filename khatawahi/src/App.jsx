@@ -37,7 +37,7 @@ const Init = () =>{
   useEffect(()=>{
     try {
 
-      axios.get('http://localhost:3000/user/me',{headers:{
+      axios.get('https://api-katawahi.onrender.com/user/me',{headers:{
         Authorization: localStorage.getItem("token")
       }}).then((res)=>{
         localStorage.setItem("username",res.data.user.username);
@@ -45,7 +45,7 @@ const Init = () =>{
       })
 
       try {
-        axios.get('http://localhost:3000/transections/totalout',{headers:{
+        axios.get('https://api-katawahi.onrender.com/transections/totalout',{headers:{
           Authorization: localStorage.getItem("token")
         }}).then((res)=>{
           if(res.data.total || res.data.total===null){
@@ -61,7 +61,7 @@ const Init = () =>{
       }
       
     
-      axios.get('http://localhost:3000/transections/total',{headers:{
+      axios.get('https://api-katawahi.onrender.com/transections/total',{headers:{
         Authorization: localStorage.getItem("token")
       }}).then((res)=>{
         if(res){
